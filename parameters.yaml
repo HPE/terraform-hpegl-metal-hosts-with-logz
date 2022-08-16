@@ -1,0 +1,67 @@
+location:
+  description: Selects in which location to perform creations
+  type: resources.location
+
+project_id:
+  description: The project-id to use
+  type: string
+
+prefix:
+  description: Prefix string for naming resources
+  default: iacgen
+  type: string
+
+machine_size:
+  description: Size of machine to use
+  type: resources.machine_size
+
+host_count:
+  description: Defines how many hosts to create (excluding the logging proxy).
+  type: integer.oneof
+  default: 1
+  options: 1,2,3,4,5,6,7,8,9
+
+public_key_name:
+  description: Public SSH key name for access to provisioned hosts
+  type: string
+
+public_key:
+  description: Public SSH key for access to provisioned hosts
+  type: string
+
+logging_proxy_public_key_name:
+  description: Public SSH key name for access to provisioned logging proxy
+  type: string
+
+logging_proxy_public_key:
+  description: Public SSH key for access to provisioned logging proxy
+  type: string
+
+logging_proxy_machine_size:
+  description: Size of machine to use
+  default: Gen9-C16-128GB+
+  type: resources.machine_size
+
+logzio_ship_token:
+  description: Shipping token to logz sub-account
+  type: string
+
+logzio_service_url:
+  description: Shipping url to logz sub-account
+  type: string
+
+logzio_service_port:
+  description: logz.io shipping port
+  type: string
+
+logging_network_pool_ip_version:
+  description: The IP version to be used, for example, IPv4
+  type: string
+
+logging_network_pool_base_ip:
+  description: he network part of the main IP pool of the logging network, for example, 10.0.0.0
+  type: string
+
+logging_network_pool_cidr:
+  description: The netmask part of the main IP pool of the logging network in CIDR notation, for example, /24
+  type: string
