@@ -1,11 +1,11 @@
 module "linux" {
-  source = "./modules/d/linux_image"
+  source = "./modules/data/linux_image"
   image_flavor = var.linux_image_flavor
   image_version = var.linux_image_version
 }
 
 module "ssh_key" {
-  source = "./modules/r/ssh_key"
+  source = "./modules/resources/ssh_key"
   name = var.public_key_name
   public_key = var.public_key
 }
@@ -33,21 +33,21 @@ resource "hpegl_metal_host" "hosts" {
 # logging is enabled
 module "logging_proxy_image" {
   count = var.enable_logging ? 1 : 0
-  source = "./modules/d/linux_image"
+  source = "./modules/data/linux_image"
   image_flavor = "ubuntu"
   image_version = "18.04"
 }
 
 module "logging_proxy_ssh_key" {
   count = var.enable_logging ? 1 : 0
-  source = "./modules/r/ssh_key"
+  source = "./modules/resources/ssh_key"
   name = var.logging_proxy_public_key_name
   public_key = var.logging_proxy_public_key
 }
 
 module "logging_network" {
   count = var.enable_logging ? 1 : 0
-  source = "./modules/r/private_network"
+  source = "./modules/resources/private_network"
   location = var.location
   name = "logging-network"
   description = "a dedicated network to stream logs"
