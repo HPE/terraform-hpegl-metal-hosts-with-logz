@@ -1,3 +1,4 @@
+// (C) Copyright 2020-2022 Hewlett Packard Enterprise Development LP
 terraform {
   required_providers {
     hpegl = {

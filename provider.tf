@@ -1,3 +1,4 @@
+// (C) Copyright 2020-2022 Hewlett Packard Enterprise Development LP
 # Set-up for terraform >= v0.13
 terraform {
   required_providers {

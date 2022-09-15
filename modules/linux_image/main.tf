@@ -1,3 +1,5 @@
+// (C) Copyright 2020-2022 Hewlett Packard Enterprise Development LP
+
 data "hpegl_metal_available_images" "linux" {
   filter {
     name   = "flavor"

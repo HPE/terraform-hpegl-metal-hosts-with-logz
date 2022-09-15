@@ -1,3 +1,5 @@
+// (C) Copyright 2020-2022 Hewlett Packard Enterprise Development LP
+
 output "logz_host_ips" {
   value = {
     logging-proxy = var.enable_logging ? hpegl_metal_host.logz_bridge.0.name : "logging not enabled"

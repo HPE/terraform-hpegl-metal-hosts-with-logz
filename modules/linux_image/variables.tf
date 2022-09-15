@@ -1,3 +1,5 @@
+// (C) Copyright 2020-2022 Hewlett Packard Enterprise Development LP
+
 variable "image_flavor" {
   description = "The Linux image flavor. Must be one of \"ubuntu\" or \"centos\""
   type = string

@@ -1,3 +1,5 @@
+// (C) Copyright 2020-2022 Hewlett Packard Enterprise Development LP
+
 variable "location" {
   description = "Textual representation of the resource location country:region:enter"
   type = string

@@ -1,3 +1,5 @@
+// (C) Copyright 2020-2022 Hewlett Packard Enterprise Development LP
+
 variable "name" {
   description = "The name of the ssh public key"
   type = string
