@@ -48,14 +48,12 @@ The following arguments are supported:
 - `logging_network_pool_base_ip` - The network part of the main IP pool of the logging network. ex. 10.0.0.0
 - `logging_network_pool_cidr` - The netmask part of the main IP pool of the logging network in CIDR notation. ex. /24
 
-### Argument Reference - Data module
+### Argument Reference - Linux image module
 
 - `image_flavor` - The base operating system distribtion, e.g. "ubuntu"
 - `image_version` - A specifc version of the image_flavor.
 
-### Argument Reference - Resources module
-
-#### Private Network 
+### Argument Reference - Private Network module
 - `location` - Textual representation of the resource location country:region:enter
 - `name` - Name of the private network
 - `description` - A description for the private network
@@ -71,6 +69,6 @@ The following arguments are supported:
 - `pool_ntp` - NTP server list for the network pool
 - `sources` - IP ranges that are to be included in the pool within the base IP and netmask
 
-#### SSH Key
+### Argument Reference - SSH Key module
 - `name` - The name of the ssh public key
 - `public_key` - The content of the ssh public key
